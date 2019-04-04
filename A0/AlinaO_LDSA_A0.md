@@ -5,17 +5,19 @@
 
 3. A snapshot is a sub-type of images and are instantaneous copies of instances that contain an image of the state of the filesystem at the moment the snapshot is taken. An image is a bootable filesystem containing an operating system and are the basis of instances. An instance is the term for a virtual machine, it is functionally identical to a physical server but can be created or destroyed and things such as operating system, storage space, RAM and virtual CPU can be modified.
 
-4.a) OpenStack Image Service is called Glance, b.) OpenStack Compute is called Nova
+4.
+  a.) OpenStack Image Service is called Glance 
+  b.) OpenStack Compute is called Nova
 
 5. Booting from an image(snapshot) will create an instance containing a clean Operating system while booting from a volume(snapshot) creates an instance based on a previously used instance that has been saved in storage.
 
 6. Changes to your instance context will not be saved after deleting the instance.
 
-7.For an instance booted by createing a new volume, will your changes to the instance be persisted on the volume after deleteing the insance?
+7.For an instance booted by createing a new volume, changes to the instance will persist on the volume after deleteing the insance only if you select 'No' for the option "Delete Volume on Instance Delete".
 
 8. Snapshots preserve the state and data of a virtual machine at a specific point in time, including the vm’s power state (i.e. powered-on, powered-off, suspended) and data that consists of all of the files that make up the vm(i.e disks, memory, and other devices). VM snapshots can be used as a quick failsafe roll back point before performing upgrades, changing installed software, uninstalling components, etc. A VM or set of VMs can have snapshots created for testing to develop and validate code changes.
 
-9.What is the meaning of "Create New Volume" upon launching an instance, and in what situations would you want to "Delete Volume on Instance Delete"?
+9. Creating a New Volume upon launching an instance enables persistent storage through creating a block storage devices that you attach to instances. You would want to "Delete Volume on Instance Delete" unless you want to use the attached volume for other instances.
 
 # Task 2: Questions
 1. The name of the OpenStack service providing volumes is the Block storage service Cinder.
@@ -41,4 +43,7 @@
 2.
 
 
+# References
 
+* Task 1.9 https://docs.openstack.org/horizon/latest/user/manage-volumes.html
+* Task 1.7/1.9 https://ubccr.freshdesk.com/support/solutions/articles/13000046549-launching-openstack-instances
