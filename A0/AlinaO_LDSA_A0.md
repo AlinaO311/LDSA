@@ -13,7 +13,7 @@
 
 7.For an instance booted by createing a new volume, will your changes to the instance be persisted on the volume after deleteing the insance?
 
-8. What does the snapshot do? What can you use it for?
+8. Snapshots preserve the state and data of a virtual machine at a specific point in time, including the vm’s power state (i.e. powered-on, powered-off, suspended) and data that consists of all of the files that make up the vm(i.e disks, memory, and other devices). VM snapshots can be used as a quick failsafe roll back point before performing upgrades, changing installed software, uninstalling components, etc. A VM or set of VMs can have snapshots created for testing to develop and validate code changes.
 
 9.What is the meaning of "Create New Volume" upon launching an instance, and in what situations would you want to "Delete Volume on Instance Delete"?
 
