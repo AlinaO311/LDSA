@@ -24,26 +24,34 @@
 
 2. Cinder only allows a volume to be attached to a single host or instance.
 
-3.Ephemeral storage is the volatile temporary storage attached to your instances which is only present during the running lifetime of the instance. In the case that the instance is stopped or terminated or underlying hardware faces an issue, any data stored on ephemeral storage would be lost. Yes, each instance by default has ephemeral storage.
+3. Ephemeral storage is the volatile temporary storage attached to your instances which is only present during the running lifetime of the instance. In the case that the instance is stopped or terminated or underlying hardware faces an issue, any data stored on ephemeral storage would be lost. Yes, each instance by default has ephemeral storage.
 
-4.Block storage is implemented in OpenStack by the Block Storage service (cinder). Because these volumes are persistent, they can be detached from one instance and re-attached to another instance and the data remains intact. The main difference is that ephemeral is temporary while Block Storage is persistent. Ephemeral storage has the main application of running the operating system and scratch space. Block Storage adds additional persistent storage to a virtual machine (VM).Object Storage has the main application of storing data, including VM images. Shared filed system storage adds additional persistent storage to a virtual machine.
+4. Block storage is implemented in OpenStack by the Block Storage service (cinder). Because these volumes are persistent, they can be detached from one instance and re-attached to another instance and the data remains intact. The main difference is that ephemeral is temporary while Block Storage is persistent. Ephemeral storage has the main application of running the operating system and scratch space. Block Storage adds additional persistent storage to a virtual machine (VM).Object Storage has the main application of storing data, including VM images. Shared filed system storage adds additional persistent storage to a virtual machine.
 
 # Task 3: Questions 
-1.
-2.
-3.A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. 
+1. The "Network Topology" image is a graphical representation of the connection of the openstack server to the many instances and the external public network. 
 
-4.
-5.
+2.
+
+3. A provider network will be used as the external gateway network and a tenant network will be used for instances. A router will be used to route traffic from the tenant network to the Internet, and floating IPs will be used to provide direct connectivity to instances.
+
+4. A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. 
+
+5. 
 
 6. The project code name for Networking Services is neutron.
 # Task 4: Questions
 
-1.
-2.
+1. A pseudo file system maintains information about the currently running system that doesn't persist across reboots, it exists while the system in running only in RAM. In UNIX filesystems folders indicate devices as they are connected and they are created dynamically based on hardware hierarchy. 
+
+2.  Though Amazon's "S3 bucket" and OpenStack's object store are different APIs, they have the same architectural concepts and building blocks where data is stored in blobs called Objects that can be uploaded and downloaded via the API.
+
+3. The name of the OpenStack service providing the Object Store is Swift
 
 
 # References
 
 * Task 1.9 https://docs.openstack.org/horizon/latest/user/manage-volumes.html
 * Task 1.7/1.9 https://ubccr.freshdesk.com/support/solutions/articles/13000046549-launching-openstack-instances
+* Task 2.4 https://docs.openstack.org/arch-design/design-storage/design-storage-concepts.html
+* Task 3.3 https://subscription.packtpub.com/book/virtualization_and_cloud/9781783983308/6/ch06lvl1sec34/demonstrating-traffic-flow-from-instance-to-internet
