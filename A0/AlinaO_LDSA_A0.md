@@ -31,13 +31,9 @@
 # Task 3: Questions 
 1. The "Network Topology" image is a graphical representation of the connection of the openstack server to the many instances and the external public network. 
 
-2.
-
 3. A provider network will be used as the external gateway network and a tenant network will be used for instances. A router will be used to route traffic from the tenant network to the Internet, and floating IPs will be used to provide direct connectivity to instances.
 
 4. A router is a networking device that forwards data packets between computer networks. Routers perform the traffic directing functions on the Internet. 
-
-5. 
 
 6. The project code name for Networking Services is neutron.
 # Task 4: Questions
