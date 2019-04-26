@@ -4,13 +4,13 @@ import re
 import sys
 import json
 
-pro1 = re.recompile('han', re.IGNORECASE)
-pro2 = re.recompile('hon', re.IGNORECASE)
-pro3 = re.recompile('hen', re.IGNORECASE)
-pro4 = re.recompile('denne', re.IGNORECASE)
-pro5 = re.recompile('den', re.IGNORECASE)
-pro6 = re.recompile('det', re.IGNORECASE)
-pro7 = re.recompile('denna', re.IGNORECASE)
+pro1 = re.compile('han', re.IGNORECASE)
+pro2 = re.compile('hon', re.IGNORECASE)
+pro3 = re.compile('hen', re.IGNORECASE)
+pro4 = re.compile('denne', re.IGNORECASE)
+pro5 = re.compile('den', re.IGNORECASE)
+pro6 = re.compile('det', re.IGNORECASE)
+pro7 = re.compile('denna', re.IGNORECASE)
 
 han = '0'
 hon = '0'
