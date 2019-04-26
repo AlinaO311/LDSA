@@ -10,7 +10,7 @@ word = None
 
 for line in sys.stdin:
 	line = line.strip()
-	
+
 	word, count = line.split('\t', 1)
 
 	try:
@@ -27,4 +27,4 @@ for line in sys.stdin:
 	    current_word = word
 
 if current_word == word:
-    print()
+    print '%s\t%s' % (current_word, current_count)
