@@ -12,40 +12,45 @@ pro5 = re.compile('den', re.IGNORECASE)
 pro6 = re.compile('det', re.IGNORECASE)
 pro7 = re.compile('denna', re.IGNORECASE)
 
-han = '0'
-hon = '0'
-hen = '0'
-denne = '0'
-den = '0'
-det = '0'
-denna = '0'
-count = '0'
+han = 0
+hon = 0
+hen = 0
+denne = 0
+den = 0
+det = 0
+denna = 0
+count = 0
 
 for line in sys.stdin:
 	line = line.strip();
-	try:
-		tweettxt = json.loads(line)
-		if(tweettxt['retweet'] == False):
-			current = tweettxt['tweet']
-			if pro1.search(current) is not None:
-				han = '1'
-			if pro2.search(current) is not None:
-				hon = '1'
-			if pro3.search(current) is not None:
-				hen = '1'
-			if pro4.search(current) is not None:
-				denne = '1'
-			if pro5.search(current) is not None:
-				den = '1'
-			if pro6.search(current) is not None:
-				det = '1'
-			if pro7.search(current) is not None:
-				denna = '1'
-			count = '1'
-	except:
-		continue
+	tweettxt = json.loads(line)
 
-	print ('%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s' % (han,hon,hen,denne,den,det,denna, count))
+	if('retweeted_status' not in tweettxt):
+		current = tweettxt['text']
+		if pro1.search(current):
+			han = 1
+		if pro2.search(current):
+			hon = 1
+		if pro3.search(current):
+			hen = 1
+		if pro4.search(current):
+			denne = 1
+		if pro5.search(current):
+			den = 1
+		if pro6.search(current):
+			det = 1
+		if pro7.search(current):
+			denna = 1
+		count = 1
+
+	print ('%s\t%s' % ("han", count))
+	print ('%s\t%s' % ("hon", count))
+	print ('%s\t%s' % ("hen", count))
+	print ('%s\t%s' % ("denne", count))
+	print ('%s\t%s' % ("den", count))
+	print ('%s\t%s' % ("det", count))
+	print ('%s\t%s' % ("denna", count))
+
 
 	han = '0'
 	hon = '0'
