@@ -22,40 +22,27 @@ denna = 0
 count = 0
 
 for line in sys.stdin:
-	line = line.strip();
-	tweettxt = json.loads(line)
-
-	if('retweeted_status' not in tweettxt):
-		current = tweettxt['text']
-		if pro1.search(current):
-			han = 1
-		if pro2.search(current):
-			hon = 1
-		if pro3.search(current):
-			hen = 1
-		if pro4.search(current):
-			denne = 1
-		if pro5.search(current):
-			den = 1
-		if pro6.search(current):
-			det = 1
-		if pro7.search(current):
-			denna = 1
-		count = 1
-
-	print ('%s\t%s' % ("han", count))
-	print ('%s\t%s' % ("hon", count))
-	print ('%s\t%s' % ("hen", count))
-	print ('%s\t%s' % ("denne", count))
-	print ('%s\t%s' % ("den", count))
-	print ('%s\t%s' % ("det", count))
-	print ('%s\t%s' % ("denna", count))
+	line = line.strip()
+	if(len(line) > 0):
+		tweettxt = json.loads(line)
+		
+		if('retweeted_status' not in tweettxt):
+			current = tweettxt['text']
+			if pro1.search(current):
+				print ('%s\t%s' % ("han", 1))
+			if pro2.search(current):
+				print ('%s\t%s' % ("hon", 1))
+			if pro3.search(current):
+				print ('%s\t%s' % ("hen", 1))
+			if pro4.search(current):
+				print ('%s\t%s' % ("denne", 1))
+			if pro5.search(current):
+				print ('%s\t%s' % ("den", 1))
+			if pro6.search(current):
+				print ('%s\t%s' % ("det", 1))
+			if pro7.search(current):
+				print ('%s\t%s' % ("denna", 1))
+			#count = 1
+	
 
 
-	han = '0'
-	hon = '0'
-	hen = '0'
-	denne = '0'
-	den = '0'
-	det = '0'
-	denna = '0'
